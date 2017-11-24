@@ -1,12 +1,12 @@
 Model {
-  Name			  "symulacja2012"
+  Name			  "symulacja2012_serv"
   Version		  7.9
   MdlSubVersion		  0
   GraphicalInterface {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.62"
+    ComputedModelVersion    "1.63"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -27,9 +27,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "student"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Fri Nov 24 12:01:42 2017"
+  LastModifiedDate	  "Fri Nov 24 12:21:26 2017"
   RTWModifiedTimeStamp	  433424657
-  ModelVersionFormat	  "1.%<AutoIncrement:62>"
+  ModelVersionFormat	  "1.%<AutoIncrement:63>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -66,12 +66,12 @@ Model {
     $PropName		    "DataLoggingOverride"
     $ObjectID		    1
     $ClassName		    "Simulink.SimulationData.ModelLoggingInfo"
-    model_		    "symulacja"
+    model_		    "symulacja2012_serv"
     overrideMode_	    [0.0]
     Array {
       Type		      "Cell"
       Dimension		      1
-      Cell		      "symulacja"
+      Cell		      "symulacja2012_serv"
       PropName		      "logAsSpecifiedByModels_"
     }
     Array {
@@ -836,13 +836,9 @@ Model {
       TransDelayFeedthrough   off
       PadeOrder		      "0"
     }
-    Block {
-      BlockType		      ZeroOrderHold
-      SampleTime	      "1"
-    }
   }
   System {
-    Name		    "symulacja2012"
+    Name		    "symulacja2012_serv"
     Location		    [2, 83, 1902, 1027]
     Open		    on
     ModelBrowserVisibility  off
@@ -857,7 +853,7 @@ Model {
     ShowPageBoundaries	    off
     ZoomFactor		    "100"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "277"
+    SIDHighWatermark	    "282"
     Block {
       BlockType		      SubSystem
       Name		      "Budynek B1"
@@ -1557,11 +1553,10 @@ Model {
     Block {
       BlockType		      Constant
       Name		      "Constant1"
-      SID		      "260"
-      Position		      [885, 330, 915, 360]
-      ZOrder		      68
-      BlockRotation	      270
-      Value		      "20"
+      SID		      "280"
+      Position		      [60, 190, 90, 220]
+      ZOrder		      58
+      Value		      "Um"
     }
     Block {
       BlockType		      Constant
@@ -1574,47 +1569,18 @@ Model {
     Block {
       BlockType		      Constant
       Name		      "Constant3"
-      SID		      "262"
-      Position		      [865, 655, 895, 685]
-      ZOrder		      68
-      BlockRotation	      270
-      Value		      "20"
+      SID		      "281"
+      Position		      [735, 190, 765, 220]
+      ZOrder		      58
+      Value		      "Ub1"
     }
     Block {
       BlockType		      Constant
       Name		      "Constant4"
-      SID		      "264"
-      Position		      [200, 90, 230, 120]
-      ZOrder		      68
-      BlockRotation	      270
-      Value		      "20"
-    }
-    Block {
-      BlockType		      Constant
-      Name		      "Constant5"
-      SID		      "218"
-      Position		      [1055, 655, 1085, 685]
-      ZOrder		      66
-      BlockRotation	      270
-      Value		      "20"
-    }
-    Block {
-      BlockType		      Constant
-      Name		      "Constant6"
-      SID		      "219"
-      Position		      [1090, 330, 1120, 360]
-      ZOrder		      68
-      BlockRotation	      270
-      Value		      "20"
-    }
-    Block {
-      BlockType		      Constant
-      Name		      "Constant7"
-      SID		      "221"
-      Position		      [425, 80, 455, 110]
-      ZOrder		      70
-      BlockRotation	      270
-      Value		      "46"
+      SID		      "282"
+      Position		      [735, 515, 765, 545]
+      ZOrder		      58
+      Value		      "Ub2"
     }
     Block {
       BlockType		      SubSystem
@@ -1843,492 +1809,6 @@ Model {
       }
     }
     Block {
-      BlockType		      Reference
-      Name		      "PID Controller"
-      SID		      "244"
-      Ports		      [1, 1]
-      Position		      [945, 282, 985, 318]
-      ZOrder		      -6
-      BlockMirror	      on
-      NamePlacement	      "alternate"
-      LibraryVersion	      "1.260"
-      SourceBlock	      "simulink/Continuous/PID Controller"
-      SourceType	      "PID 1dof"
-      Controller	      "PI"
-      TimeDomain	      "Continuous-time"
-      SampleTime	      "-1"
-      IntegratorMethod	      "Forward Euler"
-      FilterMethod	      "Forward Euler"
-      Form		      "Parallel"
-      P			      "10"
-      I			      "0.5"
-      D			      "0"
-      N			      "1.51558352628904"
-      InitialConditionSource  "internal"
-      InitialConditionForIntegrator "0"
-      InitialConditionForFilter	"0"
-      ExternalReset	      "none"
-      IgnoreLimit	      off
-      ZeroCross		      on
-      LimitOutput	      off
-      UpperSaturationLimit    "inf"
-      LowerSaturationLimit    "-inf"
-      LinearizeAsGain	      off
-      AntiWindupMode	      "none"
-      Kb		      "1"
-      TrackingMode	      off
-      Kt		      "1"
-      RndMeth		      "Floor"
-      SaturateOnIntegerOverflow	off
-      LockScale		      off
-      PParamMin		      "[]"
-      PParamMax		      "[]"
-      PParamDataTypeStr	      "Inherit: Inherit via internal rule"
-      IParamMin		      "[]"
-      IParamMax		      "[]"
-      IParamDataTypeStr	      "Inherit: Inherit via internal rule"
-      DParamMin		      "[]"
-      DParamMax		      "[]"
-      DParamDataTypeStr	      "Inherit: Inherit via internal rule"
-      NParamMin		      "[]"
-      NParamMax		      "[]"
-      NParamDataTypeStr	      "Inherit: Inherit via internal rule"
-      KbParamMin	      "[]"
-      KbParamMax	      "[]"
-      KbParamDataTypeStr      "Inherit: Inherit via internal rule"
-      KtParamMin	      "[]"
-      KtParamMax	      "[]"
-      KtParamDataTypeStr      "Inherit: Inherit via internal rule"
-      POutMin		      "[]"
-      POutMax		      "[]"
-      POutDataTypeStr	      "Inherit: Inherit via internal rule"
-      IOutMin		      "[]"
-      IOutMax		      "[]"
-      IOutDataTypeStr	      "Inherit: Inherit via internal rule"
-      DOutMin		      "[]"
-      DOutMax		      "[]"
-      DOutDataTypeStr	      "Inherit: Inherit via internal rule"
-      NOutMin		      "[]"
-      NOutMax		      "[]"
-      NOutDataTypeStr	      "Inherit: Inherit via internal rule"
-      KbOutMin		      "[]"
-      KbOutMax		      "[]"
-      KbOutDataTypeStr	      "Inherit: Inherit via internal rule"
-      KtOutMin		      "[]"
-      KtOutMax		      "[]"
-      KtOutDataTypeStr	      "Inherit: Inherit via internal rule"
-      IntegratorOutMin	      "[]"
-      IntegratorOutMax	      "[]"
-      IntegratorOutDataTypeStr "Inherit: Inherit via internal rule"
-      FilterOutMin	      "[]"
-      FilterOutMax	      "[]"
-      FilterOutDataTypeStr    "Inherit: Inherit via internal rule"
-      SumOutMin		      "[]"
-      SumOutMax		      "[]"
-      SumOutDataTypeStr	      "Inherit: Inherit via internal rule"
-      SumI1OutMin	      "[]"
-      SumI1OutMax	      "[]"
-      SumI1OutDataTypeStr     "Inherit: Inherit via internal rule"
-      SumI2OutMin	      "[]"
-      SumI2OutMax	      "[]"
-      SumI2OutDataTypeStr     "Inherit: Inherit via internal rule"
-      SumI3OutMin	      "[]"
-      SumI3OutMax	      "[]"
-      SumI3OutDataTypeStr     "Inherit: Inherit via internal rule"
-      SumDOutMin	      "[]"
-      SumDOutMax	      "[]"
-      SumDOutDataTypeStr      "Inherit: Inherit via internal rule"
-      SumAccumDataTypeStr     "Inherit: Inherit via internal rule"
-      SumI1AccumDataTypeStr   "Inherit: Inherit via internal rule"
-      SumI2AccumDataTypeStr   "Inherit: Inherit via internal rule"
-      SumI3AccumDataTypeStr   "Inherit: Inherit via internal rule"
-      SumDAccumDataTypeStr    "Inherit: Inherit via internal rule"
-      SaturationOutMin	      "[]"
-      SaturationOutMax	      "[]"
-      SaturationOutDataTypeStr "Inherit: Same as input"
-      IntegratorContinuousStateAttributes "''"
-      IntegratorStateMustResolveToSignalObject off
-      IntegratorRTWStateStorageClass "Auto"
-      FilterContinuousStateAttributes "''"
-      FilterStateMustResolveToSignalObject off
-      FilterRTWStateStorageClass "Auto"
-    }
-    Block {
-      BlockType		      Reference
-      Name		      "PID Controller1"
-      SID		      "247"
-      Ports		      [1, 1]
-      Position		      [345, 32, 385, 68]
-      ZOrder		      -6
-      BlockMirror	      on
-      NamePlacement	      "alternate"
-      LibraryVersion	      "1.260"
-      SourceBlock	      "simulink/Continuous/PID Controller"
-      SourceType	      "PID 1dof"
-      Controller	      "PI"
-      TimeDomain	      "Continuous-time"
-      SampleTime	      "-1"
-      IntegratorMethod	      "Forward Euler"
-      FilterMethod	      "Forward Euler"
-      Form		      "Parallel"
-      P			      "10"
-      I			      "0.5"
-      D			      "0"
-      N			      "100"
-      InitialConditionSource  "internal"
-      InitialConditionForIntegrator "0"
-      InitialConditionForFilter	"0"
-      ExternalReset	      "none"
-      IgnoreLimit	      off
-      ZeroCross		      on
-      LimitOutput	      off
-      UpperSaturationLimit    "inf"
-      LowerSaturationLimit    "-inf"
-      LinearizeAsGain	      off
-      AntiWindupMode	      "none"
-      Kb		      "1"
-      TrackingMode	      off
-      Kt		      "1"
-      RndMeth		      "Floor"
-      SaturateOnIntegerOverflow	off
-      LockScale		      off
-      PParamMin		      "[]"
-      PParamMax		      "[]"
-      PParamDataTypeStr	      "Inherit: Inherit via internal rule"
-      IParamMin		      "[]"
-      IParamMax		      "[]"
-      IParamDataTypeStr	      "Inherit: Inherit via internal rule"
-      DParamMin		      "[]"
-      DParamMax		      "[]"
-      DParamDataTypeStr	      "Inherit: Inherit via internal rule"
-      NParamMin		      "[]"
-      NParamMax		      "[]"
-      NParamDataTypeStr	      "Inherit: Inherit via internal rule"
-      KbParamMin	      "[]"
-      KbParamMax	      "[]"
-      KbParamDataTypeStr      "Inherit: Inherit via internal rule"
-      KtParamMin	      "[]"
-      KtParamMax	      "[]"
-      KtParamDataTypeStr      "Inherit: Inherit via internal rule"
-      POutMin		      "[]"
-      POutMax		      "[]"
-      POutDataTypeStr	      "Inherit: Inherit via internal rule"
-      IOutMin		      "[]"
-      IOutMax		      "[]"
-      IOutDataTypeStr	      "Inherit: Inherit via internal rule"
-      DOutMin		      "[]"
-      DOutMax		      "[]"
-      DOutDataTypeStr	      "Inherit: Inherit via internal rule"
-      NOutMin		      "[]"
-      NOutMax		      "[]"
-      NOutDataTypeStr	      "Inherit: Inherit via internal rule"
-      KbOutMin		      "[]"
-      KbOutMax		      "[]"
-      KbOutDataTypeStr	      "Inherit: Inherit via internal rule"
-      KtOutMin		      "[]"
-      KtOutMax		      "[]"
-      KtOutDataTypeStr	      "Inherit: Inherit via internal rule"
-      IntegratorOutMin	      "[]"
-      IntegratorOutMax	      "[]"
-      IntegratorOutDataTypeStr "Inherit: Inherit via internal rule"
-      FilterOutMin	      "[]"
-      FilterOutMax	      "[]"
-      FilterOutDataTypeStr    "Inherit: Inherit via internal rule"
-      SumOutMin		      "[]"
-      SumOutMax		      "[]"
-      SumOutDataTypeStr	      "Inherit: Inherit via internal rule"
-      SumI1OutMin	      "[]"
-      SumI1OutMax	      "[]"
-      SumI1OutDataTypeStr     "Inherit: Inherit via internal rule"
-      SumI2OutMin	      "[]"
-      SumI2OutMax	      "[]"
-      SumI2OutDataTypeStr     "Inherit: Inherit via internal rule"
-      SumI3OutMin	      "[]"
-      SumI3OutMax	      "[]"
-      SumI3OutDataTypeStr     "Inherit: Inherit via internal rule"
-      SumDOutMin	      "[]"
-      SumDOutMax	      "[]"
-      SumDOutDataTypeStr      "Inherit: Inherit via internal rule"
-      SumAccumDataTypeStr     "Inherit: Inherit via internal rule"
-      SumI1AccumDataTypeStr   "Inherit: Inherit via internal rule"
-      SumI2AccumDataTypeStr   "Inherit: Inherit via internal rule"
-      SumI3AccumDataTypeStr   "Inherit: Inherit via internal rule"
-      SumDAccumDataTypeStr    "Inherit: Inherit via internal rule"
-      SaturationOutMin	      "[]"
-      SaturationOutMax	      "[]"
-      SaturationOutDataTypeStr "Inherit: Same as input"
-      IntegratorContinuousStateAttributes "''"
-      IntegratorStateMustResolveToSignalObject off
-      IntegratorRTWStateStorageClass "Auto"
-      FilterContinuousStateAttributes "''"
-      FilterStateMustResolveToSignalObject off
-      FilterRTWStateStorageClass "Auto"
-    }
-    Block {
-      BlockType		      Reference
-      Name		      "PID Controller2"
-      SID		      "249"
-      Ports		      [1, 1]
-      Position		      [920, 607, 960, 643]
-      ZOrder		      -6
-      BlockMirror	      on
-      NamePlacement	      "alternate"
-      LibraryVersion	      "1.260"
-      SourceBlock	      "simulink/Continuous/PID Controller"
-      SourceType	      "PID 1dof"
-      Controller	      "PI"
-      TimeDomain	      "Continuous-time"
-      SampleTime	      "-1"
-      IntegratorMethod	      "Forward Euler"
-      FilterMethod	      "Forward Euler"
-      Form		      "Parallel"
-      P			      "10"
-      I			      "0.5"
-      D			      "4.73526330214478e+15"
-      N			      "0.256886063565223"
-      InitialConditionSource  "internal"
-      InitialConditionForIntegrator "0"
-      InitialConditionForFilter	"0"
-      ExternalReset	      "none"
-      IgnoreLimit	      off
-      ZeroCross		      on
-      LimitOutput	      off
-      UpperSaturationLimit    "inf"
-      LowerSaturationLimit    "-inf"
-      LinearizeAsGain	      off
-      AntiWindupMode	      "none"
-      Kb		      "1"
-      TrackingMode	      off
-      Kt		      "1"
-      RndMeth		      "Floor"
-      SaturateOnIntegerOverflow	off
-      LockScale		      off
-      PParamMin		      "[]"
-      PParamMax		      "[]"
-      PParamDataTypeStr	      "Inherit: Inherit via internal rule"
-      IParamMin		      "[]"
-      IParamMax		      "[]"
-      IParamDataTypeStr	      "Inherit: Inherit via internal rule"
-      DParamMin		      "[]"
-      DParamMax		      "[]"
-      DParamDataTypeStr	      "Inherit: Inherit via internal rule"
-      NParamMin		      "[]"
-      NParamMax		      "[]"
-      NParamDataTypeStr	      "Inherit: Inherit via internal rule"
-      KbParamMin	      "[]"
-      KbParamMax	      "[]"
-      KbParamDataTypeStr      "Inherit: Inherit via internal rule"
-      KtParamMin	      "[]"
-      KtParamMax	      "[]"
-      KtParamDataTypeStr      "Inherit: Inherit via internal rule"
-      POutMin		      "[]"
-      POutMax		      "[]"
-      POutDataTypeStr	      "Inherit: Inherit via internal rule"
-      IOutMin		      "[]"
-      IOutMax		      "[]"
-      IOutDataTypeStr	      "Inherit: Inherit via internal rule"
-      DOutMin		      "[]"
-      DOutMax		      "[]"
-      DOutDataTypeStr	      "Inherit: Inherit via internal rule"
-      NOutMin		      "[]"
-      NOutMax		      "[]"
-      NOutDataTypeStr	      "Inherit: Inherit via internal rule"
-      KbOutMin		      "[]"
-      KbOutMax		      "[]"
-      KbOutDataTypeStr	      "Inherit: Inherit via internal rule"
-      KtOutMin		      "[]"
-      KtOutMax		      "[]"
-      KtOutDataTypeStr	      "Inherit: Inherit via internal rule"
-      IntegratorOutMin	      "[]"
-      IntegratorOutMax	      "[]"
-      IntegratorOutDataTypeStr "Inherit: Inherit via internal rule"
-      FilterOutMin	      "[]"
-      FilterOutMax	      "[]"
-      FilterOutDataTypeStr    "Inherit: Inherit via internal rule"
-      SumOutMin		      "[]"
-      SumOutMax		      "[]"
-      SumOutDataTypeStr	      "Inherit: Inherit via internal rule"
-      SumI1OutMin	      "[]"
-      SumI1OutMax	      "[]"
-      SumI1OutDataTypeStr     "Inherit: Inherit via internal rule"
-      SumI2OutMin	      "[]"
-      SumI2OutMax	      "[]"
-      SumI2OutDataTypeStr     "Inherit: Inherit via internal rule"
-      SumI3OutMin	      "[]"
-      SumI3OutMax	      "[]"
-      SumI3OutDataTypeStr     "Inherit: Inherit via internal rule"
-      SumDOutMin	      "[]"
-      SumDOutMax	      "[]"
-      SumDOutDataTypeStr      "Inherit: Inherit via internal rule"
-      SumAccumDataTypeStr     "Inherit: Inherit via internal rule"
-      SumI1AccumDataTypeStr   "Inherit: Inherit via internal rule"
-      SumI2AccumDataTypeStr   "Inherit: Inherit via internal rule"
-      SumI3AccumDataTypeStr   "Inherit: Inherit via internal rule"
-      SumDAccumDataTypeStr    "Inherit: Inherit via internal rule"
-      SaturationOutMin	      "[]"
-      SaturationOutMax	      "[]"
-      SaturationOutDataTypeStr "Inherit: Same as input"
-      IntegratorContinuousStateAttributes "''"
-      IntegratorStateMustResolveToSignalObject off
-      IntegratorRTWStateStorageClass "Auto"
-      FilterContinuousStateAttributes "''"
-      FilterStateMustResolveToSignalObject off
-      FilterRTWStateStorageClass "Auto"
-    }
-    Block {
-      BlockType		      Saturate
-      Name		      "Saturation1"
-      SID		      "243"
-      Ports		      [1, 1]
-      Position		      [815, 285, 845, 315]
-      ZOrder		      48
-      BlockMirror	      on
-      InputPortMap	      "u0"
-      UpperLimit	      "60"
-      LowerLimit	      "20"
-    }
-    Block {
-      BlockType		      Saturate
-      Name		      "Saturation2"
-      SID		      "248"
-      Ports		      [1, 1]
-      Position		      [85, 35, 115, 65]
-      ZOrder		      48
-      BlockMirror	      on
-      InputPortMap	      "u0"
-      UpperLimit	      "80"
-      LowerLimit	      "20"
-    }
-    Block {
-      BlockType		      Saturate
-      Name		      "Saturation3"
-      SID		      "250"
-      Ports		      [1, 1]
-      Position		      [805, 610, 835, 640]
-      ZOrder		      48
-      BlockMirror	      on
-      InputPortMap	      "u0"
-      UpperLimit	      "60"
-      LowerLimit	      "20"
-    }
-    Block {
-      BlockType		      Scope
-      Name		      "Scope"
-      SID		      "277"
-      Ports		      [1]
-      Position		      [690, 529, 720, 561]
-      ZOrder		      -16
-      BlockMirror	      on
-      NamePlacement	      "alternate"
-      Floating		      off
-      Location		      [188, 390, 512, 629]
-      Open		      off
-      NumInputPorts	      "1"
-      List {
-	ListType		AxesTitles
-	axes1			"%<SignalLabel>"
-      }
-      ShowLegends	      off
-      DataFormat	      "StructureWithTime"
-      SampleTime	      "0"
-    }
-    Block {
-      BlockType		      Sum
-      Name		      "Sum"
-      SID		      "217"
-      Ports		      [2, 1]
-      Position		      [1060, 615, 1080, 635]
-      ZOrder		      65
-      BlockMirror	      on
-      NamePlacement	      "alternate"
-      ShowName		      off
-      IconShape		      "round"
-      Inputs		      "|-+"
-      InputSameDT	      off
-      OutDataTypeStr	      "Inherit: Inherit via internal rule"
-      SaturateOnIntegerOverflow	off
-    }
-    Block {
-      BlockType		      Sum
-      Name		      "Sum1"
-      SID		      "220"
-      Ports		      [2, 1]
-      Position		      [1095, 290, 1115, 310]
-      ZOrder		      67
-      BlockMirror	      on
-      NamePlacement	      "alternate"
-      ShowName		      off
-      IconShape		      "round"
-      Inputs		      "|-+"
-      InputSameDT	      off
-      OutDataTypeStr	      "Inherit: Inherit via internal rule"
-      SaturateOnIntegerOverflow	off
-    }
-    Block {
-      BlockType		      Sum
-      Name		      "Sum2"
-      SID		      "222"
-      Ports		      [2, 1]
-      Position		      [430, 40, 450, 60]
-      ZOrder		      69
-      BlockMirror	      on
-      NamePlacement	      "alternate"
-      ShowName		      off
-      IconShape		      "round"
-      Inputs		      "|-+"
-      InputSameDT	      off
-      OutDataTypeStr	      "Inherit: Inherit via internal rule"
-      SaturateOnIntegerOverflow	off
-    }
-    Block {
-      BlockType		      Sum
-      Name		      "Sum3"
-      SID		      "261"
-      Ports		      [2, 1]
-      Position		      [890, 290, 910, 310]
-      ZOrder		      67
-      BlockMirror	      on
-      NamePlacement	      "alternate"
-      ShowName		      off
-      IconShape		      "round"
-      Inputs		      "|++"
-      InputSameDT	      off
-      OutDataTypeStr	      "Inherit: Inherit via internal rule"
-      SaturateOnIntegerOverflow	off
-    }
-    Block {
-      BlockType		      Sum
-      Name		      "Sum4"
-      SID		      "263"
-      Ports		      [2, 1]
-      Position		      [870, 615, 890, 635]
-      ZOrder		      67
-      BlockMirror	      on
-      NamePlacement	      "alternate"
-      ShowName		      off
-      IconShape		      "round"
-      Inputs		      "|++"
-      InputSameDT	      off
-      OutDataTypeStr	      "Inherit: Inherit via internal rule"
-      SaturateOnIntegerOverflow	off
-    }
-    Block {
-      BlockType		      Sum
-      Name		      "Sum5"
-      SID		      "265"
-      Ports		      [2, 1]
-      Position		      [205, 40, 225, 60]
-      ZOrder		      67
-      BlockMirror	      on
-      NamePlacement	      "alternate"
-      ShowName		      off
-      IconShape		      "round"
-      Inputs		      "|++"
-      InputSameDT	      off
-      OutDataTypeStr	      "Inherit: Inherit via internal rule"
-      SaturateOnIntegerOverflow	off
-    }
-    Block {
       BlockType		      ToWorkspace
       Name		      "To Workspace1"
       SID		      "269"
@@ -2411,7 +1891,7 @@ Model {
       Name		      "To Workspace8"
       SID		      "272"
       Ports		      [1]
-      Position		      [365, 112, 415, 148]
+      Position		      [365, 67, 415, 103]
       ZOrder		      48
       ShowName		      off
       VariableName	      "Fzm"
@@ -2424,7 +1904,7 @@ Model {
       Name		      "To Workspace9"
       SID		      "273"
       Ports		      [1]
-      Position		      [365, 157, 415, 193]
+      Position		      [365, 112, 415, 148]
       ZOrder		      48
       ShowName		      off
       VariableName	      "Tzm"
@@ -3010,26 +2490,6 @@ Model {
 	}
       }
     }
-    Block {
-      BlockType		      ZeroOrderHold
-      Name		      "Zero-Order\nHold"
-      SID		      "275"
-      Position		      [755, 580, 785, 615]
-      ZOrder		      -19
-      BlockRotation	      270
-      NamePlacement	      "alternate"
-      SampleTime	      "10"
-    }
-    Block {
-      BlockType		      ZeroOrderHold
-      Name		      "Zero-Order\nHold1"
-      SID		      "276"
-      Position		      [785, 250, 815, 285]
-      ZOrder		      -19
-      BlockRotation	      270
-      NamePlacement	      "alternate"
-      SampleTime	      "10"
-    }
     Line {
       SrcBlock		      "Budynek B2"
       SrcPort		      1
@@ -3047,30 +2507,14 @@ Model {
     Line {
       SrcBlock		      "Budynek B2"
       SrcPort		      2
-      Points		      [3, 0]
-      Branch {
-	Points			[0, 145]
-	DstBlock		"Sum"
-	DstPort			1
-      }
-      Branch {
-	DstBlock		"To Workspace4"
-	DstPort			1
-      }
+      DstBlock		      "To Workspace4"
+      DstPort		      1
     }
     Line {
       SrcBlock		      "Budynek B1"
       SrcPort		      2
-      Points		      [20, 0]
-      Branch {
-	Points			[0, 145]
-	DstBlock		"Sum1"
-	DstPort			1
-      }
-      Branch {
-	DstBlock		"To Workspace3"
-	DstPort			1
-      }
+      DstBlock		      "To Workspace3"
+      DstPort		      1
     }
     Line {
       SrcBlock		      "Budynek B1"
@@ -3091,13 +2535,13 @@ Model {
       SrcPort		      1
       Points		      [10, 0]
       Branch {
-	Points			[60, 0]
-	DstBlock		"Wymiennik ciep³a"
+	Points			[0, -120]
+	DstBlock		"To Workspace8"
 	DstPort			1
       }
       Branch {
-	Points			[0, -75]
-	DstBlock		"To Workspace8"
+	Points			[60, 0]
+	DstBlock		"Wymiennik ciep³a"
 	DstPort			1
       }
     }
@@ -3110,7 +2554,7 @@ Model {
 	DstPort			2
       }
       Branch {
-	Points			[0, -75]
+	Points			[0, -120]
 	DstBlock		"To Workspace9"
 	DstPort			1
       }
@@ -3165,116 +2609,6 @@ Model {
       DstPort		      4
     }
     Line {
-      SrcBlock		      "Constant5"
-      SrcPort		      1
-      DstBlock		      "Sum"
-      DstPort		      2
-    }
-    Line {
-      SrcBlock		      "Constant6"
-      SrcPort		      1
-      DstBlock		      "Sum1"
-      DstPort		      2
-    }
-    Line {
-      SrcBlock		      "Constant7"
-      SrcPort		      1
-      DstBlock		      "Sum2"
-      DstPort		      2
-    }
-    Line {
-      SrcBlock		      "Sum1"
-      SrcPort		      1
-      DstBlock		      "PID Controller"
-      DstPort		      1
-    }
-    Line {
-      SrcBlock		      "Sum2"
-      SrcPort		      1
-      DstBlock		      "PID Controller1"
-      DstPort		      1
-    }
-    Line {
-      SrcBlock		      "Saturation1"
-      SrcPort		      1
-      DstBlock		      "Zero-Order\nHold1"
-      DstPort		      1
-    }
-    Line {
-      SrcBlock		      "Saturation2"
-      SrcPort		      1
-      Points		      [-15, 0; 0, 155]
-      DstBlock		      "Woda z elektrociep³owni"
-      DstPort		      1
-    }
-    Line {
-      SrcBlock		      "Sum"
-      SrcPort		      1
-      DstBlock		      "PID Controller2"
-      DstPort		      1
-    }
-    Line {
-      SrcBlock		      "Saturation3"
-      SrcPort		      1
-      Points		      [-30, 0]
-      DstBlock		      "Zero-Order\nHold"
-      DstPort		      1
-    }
-    Line {
-      SrcBlock		      "PID Controller"
-      SrcPort		      1
-      DstBlock		      "Sum3"
-      DstPort		      1
-    }
-    Line {
-      SrcBlock		      "Constant1"
-      SrcPort		      1
-      DstBlock		      "Sum3"
-      DstPort		      2
-    }
-    Line {
-      SrcBlock		      "Sum3"
-      SrcPort		      1
-      DstBlock		      "Saturation1"
-      DstPort		      1
-    }
-    Line {
-      SrcBlock		      "Constant3"
-      SrcPort		      1
-      DstBlock		      "Sum4"
-      DstPort		      2
-    }
-    Line {
-      SrcBlock		      "PID Controller2"
-      SrcPort		      1
-      DstBlock		      "Sum4"
-      DstPort		      1
-    }
-    Line {
-      SrcBlock		      "Sum4"
-      SrcPort		      1
-      DstBlock		      "Saturation3"
-      DstPort		      1
-    }
-    Line {
-      SrcBlock		      "PID Controller1"
-      SrcPort		      1
-      DstBlock		      "Sum5"
-      DstPort		      1
-    }
-    Line {
-      SrcBlock		      "Sum5"
-      SrcPort		      1
-      DstBlock		      "Saturation2"
-      DstPort		      1
-    }
-    Line {
-      SrcBlock		      "Constant4"
-      SrcPort		      1
-      DstBlock		      "Sum5"
-      DstPort		      2
-    }
-    Line {
       SrcBlock		      "Budynek B1"
       SrcPort		      3
       Points		      [55, 0]
@@ -3291,45 +2625,33 @@ Model {
     Line {
       SrcBlock		      "Wymiennik ciep³a"
       SrcPort		      1
-      Points		      [10, 0]
+      Points		      [65, 0]
       Branch {
-	Points			[0, -220]
-	DstBlock		"Sum2"
+	Points			[0, -165]
+	DstBlock		"Budynek B1"
 	DstPort			1
       }
       Branch {
-	Points			[55, 0]
-	Branch {
-	  Points		  [0, -165]
-	  DstBlock		  "Budynek B1"
-	  DstPort		  1
-	}
-	Branch {
-	  Points		  [0, 160]
-	  DstBlock		  "Budynek B2"
-	  DstPort		  1
-	}
-      }
-    }
-    Line {
-      SrcBlock		      "Zero-Order\nHold"
-      SrcPort		      1
-      Points		      [0, -15]
-      Branch {
-	Points			[0, -30]
+	Points			[0, 160]
 	DstBlock		"Budynek B2"
-	DstPort			3
-      }
-      Branch {
-	Points			[0, -15]
-	DstBlock		"Scope"
 	DstPort			1
       }
     }
     Line {
-      SrcBlock		      "Zero-Order\nHold1"
+      SrcBlock		      "Constant1"
       SrcPort		      1
-      Points		      [-20, 0]
+      DstBlock		      "Woda z elektrociep³owni"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Constant4"
+      SrcPort		      1
+      DstBlock		      "Budynek B2"
+      DstPort		      3
+    }
+    Line {
+      SrcBlock		      "Constant3"
+      SrcPort		      1
       DstBlock		      "Budynek B1"
       DstPort		      3
     }

@@ -2,7 +2,7 @@ clear all
 close all
 
 %%% initializing data
-time = 5000; %?? czas jednego cyklu symulacji??
+time = 10000; %?? czas jednego cyklu symulacji??
 
 mm = 3000;
 mco = 3000;
@@ -20,32 +20,31 @@ mb = 20000;
 cb = 1000;
 kext = 15000;
 
-%%% download initial parameters from server
+% %% download initial parameters from server
 To = 5;
 
 % while 1         %ci¹g³a pêtla oczekuj¹ca na warunek 
-%     if flaga == 1 & flaga_prev == 0         %synchranizacja z serwerem
-        
-%   download temporary data from previous cycle from server
 
-    Um = 60;
-    Ub1 = 60;
-    Ub2 = 60;
+        
+%%   download temporary data from previous cycle from server
+% 
+%     Um = 60;
+%     Ub1 = 60;
+%     Ub2 = 60;
     
+
     Tpco1_in = 5;
     Tr1_in = 5;
     Tpco2_in = 5;
     Tr2_in = 5;
-    
     Tzco_in = 5;
     Tpm_in = 5;
-    
-    
+       
     
     sim('symulacja2012',time)
+    
+    
 
-%   upload results from this cycle on server
-
-%     end
+%%   upload results from this cycle on server
 % end
     
