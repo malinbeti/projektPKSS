@@ -10,7 +10,7 @@ while True:
     con = MySQLdb.connect('12.12.12.55', 'pkss', 'pkss125', 'pkss')  # połączenie z bazą
     cur = con.cursor()
 
-    cur.execute("SELECT value FROM system where name = 'flaga' ")
+    cur.execute("SELECT value FROM status")
     flag = cur.fetchall()
     if flag<flag_prev:
         cur.execute("SELECT value FROM system where name = 'Tzco' ")
