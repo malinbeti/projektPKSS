@@ -66,7 +66,7 @@ Tzm = 70 - 2.5*(To - 6);
     
     init = [Tpm_in Tzco_in Tpco1_in Tr1_in Tpco2_in Tr2_in To Tzm];
     
-    sim('symulacja_rs_2012',time)
+%     sim('symulacja_rs_2012',time)
 
 %   upload results from this cycle on server
 %     end
